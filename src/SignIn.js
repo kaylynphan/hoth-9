@@ -75,7 +75,6 @@ function SignIn(props) {
   }
 
   function logIn(email, password) {
-    console.log('hi')
     signInWithEmailAndPassword(auth, email, password)
       .then((result) => {
         const user = result.user;
