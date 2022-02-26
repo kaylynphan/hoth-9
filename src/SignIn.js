@@ -14,6 +14,10 @@ import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
 import {useNavigate} from "react-router-dom";
 
+// database shit
+import auth from "./Auth"
+import { signInWithEmailAndPassword,signOut,} from "firebase/auth";
+
 const styles = theme => ({
   main: {
     width: 'auto',
@@ -47,23 +51,45 @@ const styles = theme => ({
 });
 
 function SignIn(props) {
+  signOut(auth).then(() => {
+    // sign out successful
+  }).catch((error) => {
+    // error occurred
+  });
   const { classes } = props;
 
   let navigate = useNavigate();
+
+  let errorMessage = "";
+
   async function goToSignIn() {
     navigate("/signin");
+  }
+
+  async function signUp() {
+    navigate("/signup");
   }
 
   async function goToHome() {
     navigate("/home");
   }
 
-  function submitForm() {
-    goToHome();
+  function logIn(email, password) {
+    signInWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user.email, user.displayName);
+        goToHome();
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+      });
   }
 
 
-  return (
+  return ( 
     <main className={classes.main}>
       <CssBaseline />
       <Paper className={classes.paper}>
@@ -75,11 +101,11 @@ function SignIn(props) {
         </Typography>
         <form className={classes.form}>
           <FormControl margin="normal" required fullWidth>
-            <InputLabel htmlFor="email">Email Address</InputLabel>
+            <InputLabel id ="email" htmlFor="email">Email Address</InputLabel>
             <Input id="email" name="email" autoComplete="email" autoFocus />
           </FormControl>
           <FormControl margin="normal" required fullWidth>
-            <InputLabel htmlFor="password">Password</InputLabel>
+            <InputLabel id="password" htmlFor="password">Password</InputLabel>
             <Input name="password" type="password" id="password" autoComplete="current-password" />
           </FormControl>
           <FormControlLabel
@@ -87,15 +113,24 @@ function SignIn(props) {
             label="Remember me"
           />
           <Button
+            fullWidth
+            variant="contained"
+            color="primary"
+            className={classes.submit}
+            onClick={logIn}
+          >
+            Sign in
+          </Button> 
+          <Button
             type="submit"
             fullWidth
             variant="contained"
             color="primary"
             className={classes.submit}
-            onClick={submitForm}
+            onClick={signUp}
           >
-            Sign in
-          </Button>
+            Don't have an account? Sign Up
+          </Button> 
         </form>
       </Paper>
     </main>
