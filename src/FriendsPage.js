@@ -78,7 +78,7 @@ function SelectionPage(props) {
         </Toolbar>
       </AppBar>
       <main className={classes.layout}>
-        <h1>Selection Page</h1>
+        <h1>Friends Page</h1>
 
         <Select />
 
