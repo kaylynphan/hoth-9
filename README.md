@@ -74,3 +74,9 @@ npm install @mui/material
 npm i classnames --save
 
 npm i @material-ui/core @material-ui/icons
+
+npm install @mui/material @emotion/react @emotion/styled
+
+npm install firebase
+
+npm install react-router-dom

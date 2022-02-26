@@ -12,6 +12,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
+import {useNavigate} from "react-router-dom";
 
 const styles = theme => ({
   main: {
@@ -48,6 +49,20 @@ const styles = theme => ({
 function SignIn(props) {
   const { classes } = props;
 
+  let navigate = useNavigate();
+  async function goToSignIn() {
+    navigate("/signin");
+  }
+
+  async function goToHome() {
+    navigate("/home");
+  }
+
+  function submitForm() {
+    goToHome();
+  }
+
+
   return (
     <main className={classes.main}>
       <CssBaseline />
@@ -77,6 +92,7 @@ function SignIn(props) {
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={submitForm}
           >
             Sign in
           </Button>
