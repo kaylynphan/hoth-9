@@ -8,6 +8,8 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
 import Select from './Select.js';
+import logo from "./assets/logo.png"
+import './App.css';
 
 const styles = theme => ({
   '@global': {
@@ -66,6 +68,7 @@ function SelectionPage(props) {
       <CssBaseline />
       <AppBar position="static" color="default" className={classes.appBar}>
         <Toolbar>
+        <img src={logo} alt="" className="sdt-logo"/>
           <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
             SuperDuper Tech
           </Typography>
@@ -78,10 +81,7 @@ function SelectionPage(props) {
         </Toolbar>
       </AppBar>
       <main className={classes.layout}>
-        <h1>Selection Page</h1>
-
         <Select />
-
       </main>
     </React.Fragment>
   );

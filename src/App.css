@@ -7,6 +7,20 @@
   pointer-events: none;
 }
 
+.sdt-logo {
+  width: 10%;
+  height: 10%;
+  cursor: pointer;
+}
+
+.home-rock {
+  width: 30%;
+  height: 90%; 
+  right: 70%;
+  bottom: -10%;
+  position: absolute;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
