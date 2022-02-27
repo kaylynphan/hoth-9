@@ -15,6 +15,7 @@ import './App.css';
 // images
 import rock from "./assets/rock.png"
 import logo from "./assets/logo.png"
+import background from "./assets/background.png"
 
 const styles = theme => ({
 
@@ -134,11 +135,11 @@ function Home(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <AppBar position="static" color="default" className={classes.appBar}>
+      <AppBar style={{backgroundColor: '#3BD5B8'}} position="static" color="default" className={classes.appBar}>
       <Toolbar>
         <img src={logo} alt="" className="sdt-logo"/>
           <Button className={classes.toolBarTitle}>
-            <Typography variant="h6" color="inherit" noWrap>
+            <Typography style={{left: '5%'}} variant="h6" color="inherit" noWrap>
               BFit Together
             </Typography>
           </Button>
@@ -154,24 +155,20 @@ function Home(props) {
           </Box>
         </Toolbar>
       </AppBar>
-      <main className={classes.layout}>
+      <main className={classes.layout} style={{width: '100%', height: '82.5%', backgroundImage: `url(${background})`, backgroundSize: 'contain',}}>
         {/* Hero unit */}
         <div className={classes.heroContent}>
-          <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
+          <Typography style={{fontWeight: '500'}} component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
             BFit Together
           </Typography>
           <Typography variant="h6" align="center" color="textSecondary" component="p">
           A web app that allows users to track workouts by selecting what type of workout they do and what their goal is for the day. If each person in a friend group works out at least 5 times a week, they get a prize!
           </Typography><br></br>
-          <img src={rock} alt="" className="home-rock"/>
-          <Button style={{left: '42%', bottom: '80%', color: 'white', backgroundColor:'navy', borderRadius: '12px',}} variant="outlined" color="primary" onClick={goToSelection}>
+          {/* <img src={rock} alt="" className="home-rock"/> */}
+          <Button style={{fontWeight: 'bold', height: '50px', width: '300px', left: '25%', bottom: '80%', color: 'white', backgroundColor:'navy', borderRadius: '20px',}} variant="outlined" color="primary" onClick={goToSelection}>
             Let's Go
           </Button>
         </div>
-        {/* End hero unit */}
-        <Grid container spacing={40} alignItems="flex-end">
-          
-        </Grid>
       </main>
     </React.Fragment>
   );

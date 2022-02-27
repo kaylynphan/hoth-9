@@ -73,7 +73,7 @@ function SelectionPage(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-        <AppBar position="static" color="default" className={classes.appBar}>
+        <AppBar style={{backgroundColor: '#3BD5B8'}} position="static" color="default" className={classes.appBar}>
           <Toolbar>
           <img src={logo} alt="" className="sdt-logo"/>
             <Button onClick={goToHome} className={classes.toolBarTitle}>

@@ -17,6 +17,9 @@ import { useNavigate } from "react-router";
 import {doc, setDoc } from "firebase/firestore";
 import {db} from "./FirebaseConfig";
 
+import './App.css';
+import logo from "./assets/logo.png"
+
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -97,7 +100,11 @@ export default function SignUp() {
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+            <img src={logo} className="signup-logo"/>
+            <Typography style={{fontSize: '48px'}} component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
+                BFit Together
+            </Typography>
+          <Avatar sx={{ m: 1, bgcolor: 'gray' }}>
           </Avatar>
           <Typography component="h1" variant="h5">
             Sign up

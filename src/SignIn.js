@@ -17,6 +17,9 @@ import {useNavigate} from "react-router-dom";
 import auth from "./Auth"
 import { signInWithEmailAndPassword,signOut,} from "firebase/auth";
 
+import './App.css';
+import logo from "./assets/logo.png"
+
 const styles = theme => ({
   main: {
     width: 'auto',
@@ -90,6 +93,10 @@ function SignIn(props) {
 
   return ( 
     <main className={classes.main}>
+      <img src={logo} className="signin-logo"/>
+      <Typography style={{fontSize: '48px'}} component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
+        BFit Together
+      </Typography>
       <CssBaseline />
       <Paper className={classes.paper}>
         <Avatar className={classes.avatar}>
