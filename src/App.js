@@ -10,6 +10,7 @@ import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
+    <div style={{height: '100vh'}}>
       <Routes>
         <Route path='/' element={<PrivateRoute />} />
         <Route path='/signin' element={<SignIn />} />
@@ -18,6 +19,7 @@ function App() {
         <Route path='/select' element={<SelectionPage />} />
         <Route path='/friends' element={<FriendsPage />} />
       </Routes>
+    </div>
   );
 }
 
