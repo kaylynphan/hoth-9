@@ -136,7 +136,7 @@ function Home(props) {
     <React.Fragment>
       <CssBaseline />
       <AppBar position="static" color="default" className={classes.appBar}>
-        <Toolbar style={{}}>
+        <Toolbar>
         <img src={logo} alt="" className="sdt-logo"/>
           <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
             SuperDuper Tech
