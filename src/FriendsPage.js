@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
+import Box from '@material-ui/core/Box'
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -8,6 +9,8 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles'
 import FriendsList from './FriendsList.js';
 import { useNavigate } from "react-router-dom";
+
+import logo from "./assets/logo.png"
 
 const styles = theme => ({
   '@global': {
@@ -63,7 +66,11 @@ function SelectionPage(props) {
   let navigate = useNavigate();
 
   async function goToFriends() {
-      navigate("./friends")
+      navigate("./friends");
+  }
+
+  async function goToHome() {
+      navigate("./home");
   }
 
   return (
@@ -71,15 +78,22 @@ function SelectionPage(props) {
       <CssBaseline />
       <AppBar position="static" color="default" className={classes.appBar}>
         <Toolbar>
-          <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
-            SuperDuper Tech
-          </Typography>
-          <Button>About</Button>
-          <Button>Products</Button>
-          <Button onClick={goToFriends}>Friends</Button>
-          <Button color="primary" variant="outlined">
-            Login
+          <img src={logo} alt="" className="sdt-logo"/>
+          <Button onClick={goToHome} className={classes.toolBarTitle}>
+            <Typography variant="h6" color="inherit" noWrap>
+              BFit Together
+            </Typography>
           </Button>
+          <Box container justifyContent="right">
+            <Button>About</Button>
+            <Button onClick={goToFriends}>Friends</Button>
+            <Button style={{right: '5%', position: 'absolute',}}
+              color="primary" 
+              variant="outlined"
+            >
+              Login
+            </Button>
+          </Box>
         </Toolbar>
       </AppBar>
       <main className={classes.layout}>
