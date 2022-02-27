@@ -15,5 +15,6 @@ BFit Together's mission is to make going to the gym a social activity and to ins
 ## How to Run
 
 Download this repository.
-<br/>
+```[bash]
 $ npm start
+```
