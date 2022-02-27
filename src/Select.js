@@ -36,7 +36,7 @@ function Goals() {
     <div>
       <h1 style={{textAlign: 'center'}}>What are your goals for today?</h1> 
       <Grid container justifyContent="center" spacing={2}>
-          {[ "PR", "Learn", "Make Gym Buddies", "Try Something New", "Stretch", "Get into Routine", "Have Fun", "Improve Form", "Release Endorphins", "Drink More Water", "Talk to Gym Crush", "Find a Spotter"].map((value) => (
+          {[ "PR", "Learn", "Find a Gym Buddie", "Try Something New", "Stretch", "Get into Routine", "Have Fun", "Improve Form", "Release Endorphins", "Drink More Water", "Talk to Gym Crush", "Find a Spotter"].map((value) => (
             <Grid key={value} item>
               <OptionButton text={value}/>
             </Grid>
