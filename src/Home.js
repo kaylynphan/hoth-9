@@ -120,9 +120,8 @@ function Home(props) {
     navigate("/select");
   }
 
-  function handleClick() {
-    console.log("click");
-    goToSelection();
+  async function goToFriends() {
+    navigate("/friends");
   }
 
   return (
@@ -135,7 +134,7 @@ function Home(props) {
           </Typography>
           <Button>About</Button>
           <Button>Products</Button>
-          <Button>Friends</Button>
+          <Button onClick={goToFriends}>Friends</Button>
           <Button color="primary" variant="outlined">
             Login
           </Button>
@@ -150,7 +149,7 @@ function Home(props) {
           <Typography variant="h6" align="center" color="textSecondary" component="p">
               Build motivation to workout with your friends!
           </Typography>
-          <Button variant="outlined" onClick={handleClick}>
+          <Button variant="outlined" onClick={goToSelection}>
             Go to Selection Page
           </Button>
         </div>

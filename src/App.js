@@ -4,6 +4,7 @@ import SignIn from './SignIn';
 import SignUp from './SignUp';
 import PrivateRoute from './PrivateRoute';
 import SelectionPage from './SelectionPage.js';
+import FriendsPage from './FriendsPage';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 
@@ -15,6 +16,7 @@ function App() {
         <Route path='/signup' element={<SignUp />} />
         <Route path='/home' element={<Home />} />
         <Route path='/select' element={<SelectionPage />} />
+        <Route path='/friends' element={<FriendsPage />} />
       </Routes>
   );
 }
