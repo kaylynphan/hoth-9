@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles'
 import FriendsList from './FriendsList.js';
 import { useNavigate } from "react-router-dom";
+import ProfileCard from './ProfileCard';
 
 import logo from "./assets/logo.png"
 
@@ -99,7 +100,11 @@ function SelectionPage(props) {
       <main className={classes.layout}>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '10%'}}>
             <div>
-                <h1>Friends Page</h1>
+                <h1>Welcome Back!</h1>
+                <ProfileCard />
+            </div>
+            <div>
+                <h1>Friends</h1>
                 <FriendsList />
             </div>
             
