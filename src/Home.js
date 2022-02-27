@@ -9,9 +9,16 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import {useNavigate} from "react-router-dom";
+import './App.css';
+
+// images
+import rock from "./assets/rock.png"
+import logo from "./assets/logo.png"
+
 
 
 const styles = theme => ({
+
   '@global': {
     body: {
       backgroundColor: theme.palette.common.white,
@@ -19,6 +26,7 @@ const styles = theme => ({
   },
   appBar: {
     position: 'relative',
+    backgroundColor: theme.palette.common.gray,
   },
   toolbarTitle: {
     flex: 1,
@@ -128,13 +136,19 @@ function Home(props) {
     <React.Fragment>
       <CssBaseline />
       <AppBar position="static" color="default" className={classes.appBar}>
-        <Toolbar>
+        <Toolbar style={{}}>
+        <img src={logo} alt="" className="sdt-logo"/>
           <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
             SuperDuper Tech
           </Typography>
+<<<<<<< HEAD
+          <Button>About Us</Button>
+          <Button>Contact</Button>
+=======
           <Button>About</Button>
           <Button>Products</Button>
           <Button onClick={goToFriends}>Friends</Button>
+>>>>>>> 63922a3ab1d111804c234d59c1a1244c123e875d
           <Button color="primary" variant="outlined">
             Login
           </Button>
@@ -144,13 +158,21 @@ function Home(props) {
         {/* Hero unit */}
         <div className={classes.heroContent}>
           <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-            Bruin Workout
+            BFit Together
           </Typography>
           <Typography variant="h6" align="center" color="textSecondary" component="p">
+<<<<<<< HEAD
+          A web app that allows users to track workouts by selecting what type of workout they do and what their goal is for the day. If each person in a friend group works out at least 5 times a week, they get a prize!
+          </Typography><br></br>
+          <img src={rock} alt="" className="home-rock"/>
+          <Button style={{left: '42%', bottom: '80%', color: 'white', backgroundColor:'navy', borderRadius: '12px',}} variant="outlined" color="primary" onClick={handleClick}>
+            Let's Go
+=======
               Build motivation to workout with your friends!
           </Typography>
           <Button variant="outlined" onClick={goToSelection}>
             Go to Selection Page
+>>>>>>> 63922a3ab1d111804c234d59c1a1244c123e875d
           </Button>
         </div>
         {/* End hero unit */}
@@ -158,19 +180,6 @@ function Home(props) {
           
         </Grid>
       </main>
-      {/* Footer */}
-      <footer className={classNames(classes.footer, classes.layout)}>
-        <Grid container spacing={32} justify="space-evenly">
-          {footers.map(footer => (
-            <Grid item xs key={footer.title}>
-              <Typography variant="h6" color="textPrimary" gutterBottom>
-                {footer.title}
-              </Typography>
-            </Grid>
-          ))}
-        </Grid>
-      </footer>
-      {/* End footer */}
     </React.Fragment>
   );
 }

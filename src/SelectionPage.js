@@ -9,6 +9,8 @@ import { withStyles } from '@material-ui/core/styles';
 import { useNavigate } from 'react-router-dom';
 
 import Select from './Select.js';
+import logo from "./assets/logo.png"
+import './App.css';
 
 const styles = theme => ({
   '@global': {
@@ -72,6 +74,7 @@ function SelectionPage(props) {
       <CssBaseline />
       <AppBar position="static" color="default" className={classes.appBar}>
         <Toolbar>
+        <img src={logo} alt="" className="sdt-logo"/>
           <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
             SuperDuper Tech
           </Typography>
@@ -84,9 +87,11 @@ function SelectionPage(props) {
         </Toolbar>
       </AppBar>
       <main className={classes.layout}>
+<<<<<<< HEAD
+=======
         <h1>Selection Page</h1>
+>>>>>>> 63922a3ab1d111804c234d59c1a1244c123e875d
         <Select />
-
       </main>
     </React.Fragment>
   );
