@@ -12,6 +12,13 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import ChatBubbleOutlinedIcon from '@mui/icons-material/ChatBubbleOutlined';
 import ThumbUpRoundedIcon from '@mui/icons-material/ThumbUpRounded';
 import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
+import './App.css';
+
+// images
+import cindy from "./assets/cindy.png"
+import brian from "./assets/brian.png"
+import jeff from "./assets/jeff.png" 
+import logo from "./assets/logo.png"
 
 
 function FriendCard(props) {
@@ -23,15 +30,16 @@ function FriendCard(props) {
         component="img"
         sx={{ width: 200 }}
         image="/static/images/cards/live-from-space.jpg"
-        alt="Friend Profile Picture"
+        alt=""
       />
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
         <CardContent sx={{ flex: '1 0 auto' }}>
           <Typography component="div" variant="h5">
             {props.name}
           </Typography>
+          <img src={props.image} alt="" className="friend-pic"/>
           <Typography variant="subtitle1" color="text.secondary" component="div">
-            Working on:s
+            Working on:
           </Typography>
           <Grid container justifyContent="left" spacing={2}>
             {props.activities.map((value) => (
@@ -70,9 +78,9 @@ function FriendCard(props) {
 function FriendsList() {
     return (
         <div>
-            <FriendCard name={"Cindy"} activities={["Pull", "Back"]} goals={["PR", "Have Fun"]}/>
-            <FriendCard name={"Brian"} activities={["Basketball", "Zumba", "Core"]} goals={["Talk to Gym Crush", "Release Endorphins"]}/>
-            <FriendCard name={"Jeffrey"} activities={["Back"]} goals={["PR", "Try Something New", "Find A Spotter"]}/>
+            <FriendCard name={"Cindy"} activities={["Pull", "Back"]} goals={["PR", "Have Fun"]} image={cindy}/>
+            <FriendCard name={"Brian"} activities={["Basketball", "Zumba", "Core"]} goals={["Talk to Gym Crush", "Release Endorphins"]} image={brian}/>
+            <FriendCard name={"Jeffrey"} activities={["Back"]} goals={["PR", "Try Something New", "Find A Spotter"]} image={jeff}/>
         </div>
     );
 }
