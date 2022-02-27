@@ -87,10 +87,6 @@ function SelectionPage(props) {
         </Toolbar>
       </AppBar>
       <main className={classes.layout}>
-<<<<<<< HEAD
-=======
-        <h1>Selection Page</h1>
->>>>>>> 63922a3ab1d111804c234d59c1a1244c123e875d
         <Select />
       </main>
     </React.Fragment>
