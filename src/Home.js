@@ -128,9 +128,8 @@ function Home(props) {
     navigate("/select");
   }
 
-  function handleClick() {
-    console.log("click");
-    goToSelection();
+  async function goToFriends() {
+    navigate("/friends");
   }
 
   return (
@@ -142,8 +141,14 @@ function Home(props) {
           <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
             SuperDuper Tech
           </Typography>
+<<<<<<< HEAD
           <Button>About Us</Button>
           <Button>Contact</Button>
+=======
+          <Button>About</Button>
+          <Button>Products</Button>
+          <Button onClick={goToFriends}>Friends</Button>
+>>>>>>> 63922a3ab1d111804c234d59c1a1244c123e875d
           <Button color="primary" variant="outlined">
             Login
           </Button>
@@ -156,11 +161,18 @@ function Home(props) {
             BFit Together
           </Typography>
           <Typography variant="h6" align="center" color="textSecondary" component="p">
+<<<<<<< HEAD
           A web app that allows users to track workouts by selecting what type of workout they do and what their goal is for the day. If each person in a friend group works out at least 5 times a week, they get a prize!
           </Typography><br></br>
           <img src={rock} alt="" className="home-rock"/>
           <Button style={{left: '42%', bottom: '80%', color: 'white', backgroundColor:'navy', borderRadius: '12px',}} variant="outlined" color="primary" onClick={handleClick}>
             Let's Go
+=======
+              Build motivation to workout with your friends!
+          </Typography>
+          <Button variant="outlined" onClick={goToSelection}>
+            Go to Selection Page
+>>>>>>> 63922a3ab1d111804c234d59c1a1244c123e875d
           </Button>
         </div>
         {/* End hero unit */}
