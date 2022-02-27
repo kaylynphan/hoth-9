@@ -6,6 +6,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
+import { useNavigate } from 'react-router-dom';
 
 import Select from './Select.js';
 
@@ -60,6 +61,11 @@ const styles = theme => ({
 
 function SelectionPage(props) {
   const { classes } = props;
+  let navigate = useNavigate();
+
+  async function goToFriends() {
+    navigate("/friends");
+  }
 
   return (
     <React.Fragment>
@@ -71,7 +77,7 @@ function SelectionPage(props) {
           </Typography>
           <Button>About</Button>
           <Button>Products</Button>
-          <Button>Friends</Button>
+          <Button onClick={goToFriends}>Friends</Button>
           <Button color="primary" variant="outlined">
             Login
           </Button>
@@ -79,7 +85,6 @@ function SelectionPage(props) {
       </AppBar>
       <main className={classes.layout}>
         <h1>Selection Page</h1>
-
         <Select />
 
       </main>
