@@ -97,9 +97,13 @@ function SelectionPage(props) {
         </Toolbar>
       </AppBar>
       <main className={classes.layout}>
-        <h1>Friends Page</h1>
-
-        <FriendsList />
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '10%'}}>
+            <div>
+                <h1>Friends Page</h1>
+                <FriendsList />
+            </div>
+            
+        </Box>
 
       </main>
     </React.Fragment>
