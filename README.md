@@ -1,4 +1,4 @@
-# BFit Together
+# <a href="https://docs.google.com/presentation/d/1dOA08SkuOG8YqfV2G8m-n2OJxrChyID3nbtH7jvoOlI/edit?usp=sharing">BFit Together</a>
 
 By Kaylyn Phan, Jeffrey Lin, and Brian Park
 
@@ -15,4 +15,5 @@ BFit Together's mission is to make going to the gym a social activity and to ins
 ## How to Run
 
 Download this repository.
+<br/>
 $ npm start
