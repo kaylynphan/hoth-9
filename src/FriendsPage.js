@@ -66,11 +66,11 @@ function SelectionPage(props) {
   let navigate = useNavigate();
 
   async function goToFriends() {
-      navigate("./friends");
+      navigate("/friends");
   }
 
   async function goToHome() {
-      navigate("./home");
+      navigate("/home");
   }
 
   return (
